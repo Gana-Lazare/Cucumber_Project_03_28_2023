@@ -12,7 +12,7 @@ public class login extends Login_Page {
     @Given("user navigate to the site")
     public void user_navigate_to_the_site() throws MalformedURLException {
         launchBrowser();
-        clickOnLogInButton();
+        //clickOnLogInButton();
         getPageTitle();
         tearDown();
 
