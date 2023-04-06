@@ -144,8 +144,8 @@ public class BasePage {
             captureScreenShots(driver,result.getTestName());
         }
         else test.fail("Test Title Fail");
-        extent.flush();
-        driver.quit();
+//        extent.flush();
+//        driver.quit();
     }
 
     public void tearDown() {
