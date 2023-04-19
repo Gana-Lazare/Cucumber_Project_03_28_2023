@@ -74,7 +74,6 @@ public class ConnectToPostgresDB {
         List<String> dataList = new ArrayList();
 
         while(resultSet.next()){
-            System.out.println("INSIDE");
             String itemName = resultSet.getString(columnName);
             System.out.println("column name : "+ itemName);
             dataList.add(itemName);

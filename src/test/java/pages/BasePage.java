@@ -22,9 +22,10 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+
 
 
 import java.io.File;
@@ -38,6 +39,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 
 public class BasePage {
@@ -49,7 +51,6 @@ public class BasePage {
     public DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyMMddHHmmssZ");
     public LocalDateTime now = LocalDateTime.now();
     public LoadConfig loadConfig = new LoadConfig();
-    //public ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir")+"\\Report\\"+"Spark.html");
     public ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir")+"\\Report\\spark.html");
     ConnectToPostgresDB connectToPostgresDB = new ConnectToPostgresDB();
 
@@ -144,13 +145,16 @@ public class BasePage {
             captureScreenShots(driver,result.getTestName());
         }
         else test.fail("Test Title Fail");
-//        extent.flush();
-//        driver.quit();
+//          extent.flush();
+////        driver.quit();
     }
 
+    @AfterTest
     public void tearDown() {
+
         extent.flush();
         driver.quit();
+
     }
 
 
