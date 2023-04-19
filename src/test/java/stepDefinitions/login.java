@@ -13,9 +13,10 @@ public class login extends Login_Page {
     public void user_navigate_to_the_site() throws MalformedURLException {
         launchBrowser();
         //clickOnLogInButton();
-        getPageTitle();
+        //getPageTitle();
         tearDown();
 
     }
+
 
 }
