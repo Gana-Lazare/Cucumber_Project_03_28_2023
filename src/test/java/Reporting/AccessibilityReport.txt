@@ -1,0 +1,549 @@
+Your Web Page Has the Following Number of Violations : 13
+_________________________________________________________________________________
+1) Ensures role attribute has an appropriate value for the element.
+https://dequeuniversity.com/rules/axe/3.1/aria-allowed-role?application=axeAPI
+1.1) [iframe[title="reCAPTCHA"]]
+Fix any of the following:
+  role presentation  is not allowed for given element
+
+1.2) [iframe[title="reCAPTCHA"], #recaptcha-anchor-label]
+Fix any of the following:
+  role presentation  is not allowed for given element
+
+_________________________________________________________________________________
+2) Ensures buttons have discernible text.
+https://dequeuniversity.com/rules/axe/3.1/button-name?application=axeAPI
+2.1) [#aswift_1, #cbb]
+Fix all of the following:
+  Element is in tab order and does not have accessible text
+
+Fix any of the following:
+  Element has a value attribute and the value attribute is empty
+  Element has no value attribute or the value attribute is empty
+  Element does not have inner text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+  Element has no title attribute or the title attribute is empty
+
+2.2) [.input-group-btn > .btn-primary.btn[type="submit"]]
+Fix all of the following:
+  Element is in tab order and does not have accessible text
+
+Fix any of the following:
+  Element has a value attribute and the value attribute is empty
+  Element has no value attribute or the value attribute is empty
+  Element does not have inner text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+  Element has no title attribute or the title attribute is empty
+
+2.3) [#aswift_5, #cbb]
+Fix all of the following:
+  Element is in tab order and does not have accessible text
+
+Fix any of the following:
+  Element has a value attribute and the value attribute is empty
+  Element has no value attribute or the value attribute is empty
+  Element does not have inner text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+  Element has no title attribute or the title attribute is empty
+
+2.4) [#aswift_3, #cbb]
+Fix all of the following:
+  Element is in tab order and does not have accessible text
+
+Fix any of the following:
+  Element has a value attribute and the value attribute is empty
+  Element has no value attribute or the value attribute is empty
+  Element does not have inner text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+  Element has no title attribute or the title attribute is empty
+
+_________________________________________________________________________________
+3) Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds.
+https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=axeAPI
+3.1) [.cs > .hljs-string:nth-child(7)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.2) [.cs > .hljs-string:nth-child(10)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.3) [.cs > .hljs-string:nth-child(12)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.4) [.cs > .hljs-string:nth-child(13)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.5) [.cs > .hljs-string:nth-child(14)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.6) [.cs > .hljs-string:nth-child(15)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.7) [.cs > .hljs-string:nth-child(17)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.8) [.cs > .hljs-string:nth-child(23)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.9) [.cs > .hljs-string:nth-child(24)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.10) [.hljs-string:nth-child(25)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.11) [.hljs-string:nth-child(26)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.12) [.hljs-string:nth-child(28)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.13) [.hljs-string:nth-child(29)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.14) [.hljs-string:nth-child(30)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.15) [.hljs-string:nth-child(31)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.16) [.hljs-string:nth-child(32)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.17) [.hljs-string:nth-child(33)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.18) [.hljs-string:nth-child(34)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.19) [.hljs-string:nth-child(36)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.20) [.hljs-number:nth-child(1)]
+Fix any of the following:
+  Element has insufficient color contrast of 3 (foreground color: #009999, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.21) [.hljs-number:nth-child(2)]
+Fix any of the following:
+  Element has insufficient color contrast of 3 (foreground color: #009999, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.22) [pre:nth-child(11) > .bash.hljs > .hljs-string:nth-child(1)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.23) [pre:nth-child(11) > .bash.hljs > .hljs-string:nth-child(2)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.24) [pre:nth-child(11) > .bash.hljs > .hljs-string:nth-child(3)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.25) [pre:nth-child(13) > .bash.hljs > .hljs-string:nth-child(1)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.26) [pre:nth-child(13) > .bash.hljs > .hljs-string:nth-child(2)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.27) [pre:nth-child(13) > .bash.hljs > .hljs-string:nth-child(3)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.28) [.makefile > .hljs-string:nth-child(1)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.29) [.makefile > .hljs-string:nth-child(2)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.30) [.makefile > .hljs-string:nth-child(3)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.31) [.hljs-string:nth-child(4)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.32) [.hljs-string:nth-child(5)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.33) [.hljs-string:nth-child(6)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.34) [.makefile > .hljs-string:nth-child(7)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.35) [.hljs-string:nth-child(8)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.36) [.hljs-string:nth-child(9)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.37) [.makefile > .hljs-string:nth-child(10)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.38) [.hljs-string:nth-child(11)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.39) [.makefile > .hljs-string:nth-child(12)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.40) [.makefile > .hljs-string:nth-child(13)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.41) [.makefile > .hljs-string:nth-child(14)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.42) [.makefile > .hljs-string:nth-child(15)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.43) [.hljs-string:nth-child(16)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.44) [.makefile > .hljs-string:nth-child(17)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.45) [.hljs-string:nth-child(18)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.46) [.hljs-string:nth-child(19)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.47) [.hljs-string:nth-child(20)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.48) [.hljs-string:nth-child(21)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.49) [.hljs-string:nth-child(22)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.50) [.makefile > .hljs-string:nth-child(23)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.51) [.makefile > .hljs-string:nth-child(24)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.52) [.hljs-attr_selector:nth-child(17)]
+Fix any of the following:
+  Element has insufficient color contrast of 2.58 (foreground color: #8888ff, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.53) [.hljs-attr_selector:nth-child(20)]
+Fix any of the following:
+  Element has insufficient color contrast of 2.58 (foreground color: #8888ff, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.54) [.hljs-attr_selector:nth-child(28)]
+Fix any of the following:
+  Element has insufficient color contrast of 2.58 (foreground color: #8888ff, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.55) [.hljs-attr_selector:nth-child(31)]
+Fix any of the following:
+  Element has insufficient color contrast of 2.58 (foreground color: #8888ff, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.56) [.hljs-pseudo:nth-child(40)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.11 (foreground color: #008080, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.57) [.hljs-pseudo:nth-child(48)]
+Fix any of the following:
+  Element has insufficient color contrast of 4.11 (foreground color: #008080, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.58) [.hljs-number:nth-child(13)]
+Fix any of the following:
+  Element has insufficient color contrast of 3 (foreground color: #009999, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.59) [.hljs-number:nth-child(14)]
+Fix any of the following:
+  Element has insufficient color contrast of 3 (foreground color: #009999, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.60) [.help-block]
+Fix any of the following:
+  Element has insufficient color contrast of 4.47 (foreground color: #777777, background color: #ffffff, font size: 9.0pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.61) [#edit-submit]
+Fix any of the following:
+  Element has insufficient color contrast of 2.48 (foreground color: #ffffff, background color: #5cb85c, font size: 10.5pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.62) [a[href$="#collapseOne"]]
+Fix any of the following:
+  Element has insufficient color contrast of 3.96 (foreground color: #ffffff, background color: #d9534f, font size: 16.5pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.63) [a[href$="#collapseTwo"]]
+Fix any of the following:
+  Element has insufficient color contrast of 3.96 (foreground color: #ffffff, background color: #d9534f, font size: 16.5pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.64) [a[href$="#collapseThree"]]
+Fix any of the following:
+  Element has insufficient color contrast of 3.96 (foreground color: #ffffff, background color: #d9534f, font size: 16.5pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.65) [#mc-embedded-subscribe]
+Fix any of the following:
+  Element has insufficient color contrast of 3.96 (foreground color: #ffffff, background color: #d9534f, font size: 10.5pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+_________________________________________________________________________________
+4) Ensures <iframe> and <frame> elements contain a non-empty title attribute.
+https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI
+4.1) [#aswift_1]
+Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element has no title attribute or the title attribute is empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+4.2) [#aswift_5]
+Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element has no title attribute or the title attribute is empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+4.3) [#aswift_3]
+Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element has no title attribute or the title attribute is empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+4.4) [#aswift_1, body > iframe]
+Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element has no title attribute or the title attribute is empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+4.5) [#aswift_5, iframe:nth-child(17)]
+Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element has no title attribute or the title attribute is empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+4.6) [#aswift_3, body > iframe]
+Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element has no title attribute or the title attribute is empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+_________________________________________________________________________________
+5) Ensures the order of headings is semantically correct.
+https://dequeuniversity.com/rules/axe/3.1/heading-order?application=axeAPI
+5.1) [#headingOne > .panel-title]
+Fix any of the following:
+  Heading order invalid
+
+5.2) [.col-md-3:nth-child(1) > h4]
+Fix any of the following:
+  Heading order invalid
+
+_________________________________________________________________________________
+6) Ensures every HTML document has a lang attribute.
+https://dequeuniversity.com/rules/axe/3.1/html-has-lang?application=axeAPI
+6.1) [#aswift_1, html]
+Fix any of the following:
+  The <html> element does not have a lang attribute
+
+6.2) [#aswift_1, body > iframe, html]
+Fix any of the following:
+  The <html> element does not have a lang attribute
+
+6.3) [#aswift_5, html]
+Fix any of the following:
+  The <html> element does not have a lang attribute
+
+6.4) [#aswift_5, iframe:nth-child(17), html]
+Fix any of the following:
+  The <html> element does not have a lang attribute
+
+6.5) [#aswift_3, html]
+Fix any of the following:
+  The <html> element does not have a lang attribute
+
+6.6) [#aswift_3, body > iframe, html]
+Fix any of the following:
+  The <html> element does not have a lang attribute
+
+_________________________________________________________________________________
+7) Ensures that every form element is not solely labeled using the title or aria-describedby attributes.
+https://dequeuniversity.com/rules/axe/3.1/label-title-only?application=axeAPI
+7.1) [#edit-search-block-form--2]
+Fix all of the following:
+  Only title used to generate label for form element
+
+_________________________________________________________________________________
+8) Ensures every form element has a label.
+https://dequeuniversity.com/rules/axe/3.1/label?application=axeAPI
+8.1) [#mce-EMAIL]
+Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+
+_________________________________________________________________________________
+9) Ensures the page has only one main landmark and each iframe in the page has at most one main landmark.
+https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=axeAPI
+9.1) [html]
+Fix all of the following:
+  Page does not have a main landmark
+
+9.2) [#aswift_1, html]
+Fix all of the following:
+  Page does not have a main landmark
+
+9.3) [#aswift_1, body > iframe, html]
+Fix all of the following:
+  Page does not have a main landmark
+
+9.4) [#aswift_5, html]
+Fix all of the following:
+  Page does not have a main landmark
+
+9.5) [#aswift_5, iframe:nth-child(17), html]
+Fix all of the following:
+  Page does not have a main landmark
+
+9.6) [iframe[title="reCAPTCHA"], html]
+Fix all of the following:
+  Page does not have a main landmark
+
+9.7) [#aswift_3, html]
+Fix all of the following:
+  Page does not have a main landmark
+
+9.8) [#aswift_3, body > iframe, html]
+Fix all of the following:
+  Page does not have a main landmark
+
+_________________________________________________________________________________
+10) Ensures links have discernible text.
+https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI
+10.1) [#aswift_1, #aw0]
+Fix all of the following:
+  Element is in tab order and does not have accessible text
+
+Fix any of the following:
+  Element does not have text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+10.2) [#aswift_5, #aw0]
+Fix all of the following:
+  Element is in tab order and does not have accessible text
+
+Fix any of the following:
+  Element does not have text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+10.3) [#aswift_3, #aw0]
+Fix all of the following:
+  Element is in tab order and does not have accessible text
+
+Fix any of the following:
+  Element does not have text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+_________________________________________________________________________________
+11) Ensures <li> elements are used semantically.
+https://dequeuniversity.com/rules/axe/3.1/listitem?application=axeAPI
+11.1) [#collapseOne > .panel-body.item-list > li:nth-child(1)]
+Fix any of the following:
+  List item does not have a <ul>, <ol> or role="list" parent element
+
+11.2) [#collapseOne > .panel-body.item-list > li:nth-child(2)]
+Fix any of the following:
+  List item does not have a <ul>, <ol> or role="list" parent element
+
+11.3) [#collapseOne > .panel-body.item-list > li:nth-child(3)]
+Fix any of the following:
+  List item does not have a <ul>, <ol> or role="list" parent element
+
+11.4) [#collapseOne > .panel-body.item-list > li:nth-child(4)]
+Fix any of the following:
+  List item does not have a <ul>, <ol> or role="list" parent element
+
+11.5) [#collapseOne > .panel-body.item-list > li:nth-child(5)]
+Fix any of the following:
+  List item does not have a <ul>, <ol> or role="list" parent element
+
+_________________________________________________________________________________
+12) Ensures <marquee> elements are not used.
+https://dequeuniversity.com/rules/axe/3.1/marquee?application=axeAPI
+12.1) [marquee]
+Fix all of the following:
+  Element is visible
+
+_________________________________________________________________________________
+13) Ensures all page content is contained by landmarks.
+https://dequeuniversity.com/rules/axe/3.1/region?application=axeAPI
+13.1) [html]
+Fix any of the following:
+  Some page content is not contained by landmarks
+
