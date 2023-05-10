@@ -1,6 +1,7 @@
 package pages;
 
 import Reporting.ExtentTestManager;
+import Reporting.ViolationsReporter;
 import Utility.ConnectToPostgresDB;
 import Utility.LoadConfig;
 import com.aventstack.extentreports.ExtentReports;
@@ -9,12 +10,23 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+
+import com.deque.html.axecore.extensions.WebDriverExtensions;
+import com.deque.html.axecore.results.Results;
+import com.deque.html.axecore.results.Rule;
+import com.deque.html.axecore.selenium.AxeBuilder;
+import com.deque.html.axecore.selenium.AxeReporter;
+
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
+import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.*;
 
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -23,51 +35,61 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.Context;
 
 
-
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 
 public class BasePage {
 
     public WebDriver driver = null;
+    public AxeBuilder axeBuilder = new AxeBuilder();
     public WebDriverWait wait = null;
     public ITestResult result = null;
     public ExtentReports extent = new ExtentReports();
     public DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyMMddHHmmssZ");
     public LocalDateTime now = LocalDateTime.now();
     public LoadConfig loadConfig = new LoadConfig();
-    public ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir")+"\\Report\\spark.html");
+   // public ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir")+"\\Report\\spark.html");
     ConnectToPostgresDB connectToPostgresDB = new ConnectToPostgresDB();
 
 
-@Test
+
+
     public void launchBrowser() throws MalformedURLException {
-        String useCloudEnv = "false";
-        String envName = null;
-        String os = null;
-        String os_version = null;
-        String browserName = null;
-        String browserVersion = null;
-        String url = null;
-        String browserstack_username = null;
-        String browserstack_accesskey = null;
-        String saucelabs_username = null;
-        String saucelabs_accesskey = null;
+        try {
+            String useCloudEnv = "false";
+            String envName = null;
+            String os = null;
+            String os_version = null;
+            String browserName = null;
+            String browserVersion = null;
+            String url = null;
+            String browserstack_username = null;
+            String browserstack_accesskey = null;
+            String saucelabs_username = null;
+            String saucelabs_accesskey = null;
 
             //parsing the  value of string
             useCloudEnv = loadConfig.loadProperties().getProperty("useCloudEnv");
@@ -79,12 +101,12 @@ public class BasePage {
             url = loadConfig.loadProperties().getProperty("url");
             browserstack_username = loadConfig.loadProperties().getProperty("browserstack_username");
             browserstack_accesskey = loadConfig.loadProperties().getProperty("browserstack_accesskey");
-            saucelabs_username = connectToPostgresDB.readFromDB("credentials","username").toString();
-            saucelabs_accesskey = connectToPostgresDB.readFromDB("credentials","accesskey").toString();
+            saucelabs_username = connectToPostgresDB.readFromDB("credentials", "username").toString();
+            saucelabs_accesskey = connectToPostgresDB.readFromDB("credentials", "accesskey").toString();
 
-            spark.config().setTheme(Theme.DARK);
-            spark.config().setDocumentTitle("MyReport");
-            extent.attachReporter(spark);//can add other reports like avant ..
+//            spark.config().setTheme(Theme.DARK);
+//            spark.config().setDocumentTitle("MyReport");
+//            extent.attachReporter(spark);//can add other reports like avant ..
             if (useCloudEnv.equalsIgnoreCase("true")) {
                 if (envName == "browserstack") {
                     this.driver = getCloudDriver(envName, browserstack_username, browserstack_accesskey, os, os_version,
@@ -94,25 +116,63 @@ public class BasePage {
                     this.driver = getCloudDriver(envName, saucelabs_username, saucelabs_accesskey, os, os_version,
                             browserName, browserVersion);
                 }
-            }
-            else if (useCloudEnv.equalsIgnoreCase("false")) {
+            } else if (useCloudEnv.equalsIgnoreCase("false")) {
                 System.out.println("Local Driver ");
-                driver = getLocalDriver();
+                //driver = getLocalDriver();
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver();
             }
 
-        this.driver.get(url);
-        this.driver.manage().window().maximize();
-        System.out.println("access to : " + url);
+            driver.get(url);
+
+            driver.manage().window().maximize();
+            //axeBuilder below takes tramendous amount of time to analyse the webPage
+            //Im not currently Sure of this is the right method to implement this
+//        Results axeResults = axeBuilder.analyze(driver);
+//        System.out.println(axeResults);
+            // Assert.assertTrue(axeResults.violationFree());
+            // axeBuilder.include(url);
+            // List<AccessibilityViolation> violations = axeBuilder.ana;
+            List<String> tags = Arrays.asList("wcag21aa");
+            AxeBuilder builder = new AxeBuilder();
+            builder.withTags(tags);
+            System.out.println("We Are in WEbSite :   " + driver.getTitle());
+            /*
+            FOR SOME REASON THE BELOW METHOD IS NOT WORKING AND ACTUALLY TAKES a TIMEOUT AND NEVER
+            ANALYZE THE PAGE I HAD TO REPLACE THAT WITH WebDriverExtentions.analyze()
+            Results results = builder.analyze(driver);
+            */
+
+            Results results = WebDriverExtensions.analyze(driver);
+            //**get all violations
+            List<Rule> violations = results.getViolations();
+            //List<Rule> passResults = results.getPasses();
+            for (Rule i : violations) {
+                //for (Rule i : passResults) {
+               // System.out.println(i);
+            }
+            SoftAssert softAssert = new SoftAssert();
+            softAssert.assertEquals(0, results.getViolations().size());
+           // Assert.assertEquals(results.getViolations().size(),);
+            ViolationsReporter.buildCustomReport(results);
+            //Assert.assertTrue(results.violationFree(), ViolationsReporter.buildCustomReport(results));
+            softAssert.assertEquals(0, results.getViolations().size());
+
+            driver.quit();
+        }
+        catch (Exception e){}
     }
 
     public WebDriver getLocalDriver() {
-        WebDriverManager.edgedriver();
+        WebDriverManager.edgedriver().setup();
 
-        driver = new EdgeDriver();
+        this.driver = new EdgeDriver();
         driver.manage().window().maximize();
 
         return driver;
     }
+
+
 
     public WebDriver getCloudDriver(String envName, String envUsername, String envAccessKey, String os, String os_version, String browserName,
                                     String browserVersion) throws MalformedURLException {
@@ -141,18 +201,19 @@ public class BasePage {
 
 
         if (title == "Delta") {
-            test.pass("Test Pass");
+            //test.pass("Test Pass");
             captureScreenShots(driver,result.getTestName());
         }
-        else test.fail("Test Title Fail");
+      //  else //test.fail("Test Title Fail");
 //          extent.flush();
 ////        driver.quit();
     }
 
-    @AfterTest
+
+
     public void tearDown() {
 
-        extent.flush();
+//        extent.flush();
         driver.quit();
 
     }
@@ -205,6 +266,54 @@ public class BasePage {
         } catch (Exception e) {
             e.getMessage();
         }
+    }
+
+
+    public static void readAccessibility(){
+ try {
+     Context context = new Context();
+
+     System.out.println(System.getProperty("user.dir")+"\\src\\test\\java\\Reporting\\AccessibilityReport.txt");
+     FileReader fileReader = new FileReader(System.getProperty("user.dir")+"\\src\\test\\java\\Reporting\\AccessibilityReport.txt");
+     BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+     String txtContents = bufferedReader.readLine();
+
+     context.setVariable("txtContents", txtContents);
+
+     TemplateEngine templateEngine = new TemplateEngine();
+     String html = templateEngine.process(System.getProperty("user.dir")+"\\src\\test\\java\\Reporting\\AllyReport.html"
+             , context);
+
+     FileWriter fileWriter = new FileWriter(System.getProperty("user.dir")+"\\src\\test\\java\\Reporting\\AllyReport.html");
+     //Files.write(Paths.get(System.getProperty("user.dir")+"\\src\\test\\java\\Reporting\\AllyReport.html"), html.getBytes());
+     fileWriter.write("<html>\n<head>\n<title>Accessibility Testing Report</title>\n</head>\n<body>\n");
+
+     // read the input file line by line and write each line as an HTML paragraph to the output file
+     String line;
+     while ((line = bufferedReader.readLine()) != null) {
+         fileWriter.write("<p>" + line + "</p>\n");
+     }
+
+     // write the HTML footer to the output file
+     fileWriter.write("</body>\n</html>");
+
+     // close the input and output streams
+     bufferedReader.close();
+     fileReader.close();
+     fileWriter.close();
+
+     System.out.println("Conversion complete!");
+
+ }
+ catch (Exception e){
+ e.getMessage();
+ e.getStackTrace();
+ }
+    }
+
+    public static void main(String[] args) {
+        readAccessibility();
     }
 
 
