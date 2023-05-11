@@ -27,7 +27,7 @@ Fix any of the following:
   Element's default semantics were not overridden with role="none"
   Element has no title attribute or the title attribute is empty
 
-2.2) [.input-group-btn > .btn-primary.btn[type="submit"]]
+2.2) [.input-group-btn > .btn-primary]
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -55,7 +55,21 @@ Fix any of the following:
   Element's default semantics were not overridden with role="none"
   Element has no title attribute or the title attribute is empty
 
-2.4) [#aswift_3, #cbb]
+2.4) [#aswift_6, #cbb]
+Fix all of the following:
+  Element is in tab order and does not have accessible text
+
+Fix any of the following:
+  Element has a value attribute and the value attribute is empty
+  Element has no value attribute or the value attribute is empty
+  Element does not have inner text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+  Element has no title attribute or the title attribute is empty
+
+2.5) [#aswift_3, #cbb]
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -156,27 +170,27 @@ Fix any of the following:
 Fix any of the following:
   Element has insufficient color contrast of 3 (foreground color: #009999, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
 
-3.22) [pre:nth-child(11) > .bash.hljs > .hljs-string:nth-child(1)]
+3.22) [pre:nth-child(12) > .bash.hljs > .hljs-string:nth-child(1)]
 Fix any of the following:
   Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
 
-3.23) [pre:nth-child(11) > .bash.hljs > .hljs-string:nth-child(2)]
+3.23) [pre:nth-child(12) > .bash.hljs > .hljs-string:nth-child(2)]
 Fix any of the following:
   Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
 
-3.24) [pre:nth-child(11) > .bash.hljs > .hljs-string:nth-child(3)]
+3.24) [pre:nth-child(12) > .bash.hljs > .hljs-string:nth-child(3)]
 Fix any of the following:
   Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
 
-3.25) [pre:nth-child(13) > .bash.hljs > .hljs-string:nth-child(1)]
+3.25) [pre:nth-child(14) > .bash.hljs > .hljs-string:nth-child(1)]
 Fix any of the following:
   Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
 
-3.26) [pre:nth-child(13) > .bash.hljs > .hljs-string:nth-child(2)]
+3.26) [pre:nth-child(14) > .bash.hljs > .hljs-string:nth-child(2)]
 Fix any of the following:
   Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
 
-3.27) [pre:nth-child(13) > .bash.hljs > .hljs-string:nth-child(3)]
+3.27) [pre:nth-child(14) > .bash.hljs > .hljs-string:nth-child(3)]
 Fix any of the following:
   Element has insufficient color contrast of 4.27 (foreground color: #dd1144, background color: #eeeeee, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1
 
@@ -332,6 +346,22 @@ Fix any of the following:
 Fix any of the following:
   Element has insufficient color contrast of 3.96 (foreground color: #ffffff, background color: #d9534f, font size: 10.5pt, font weight: normal). Expected contrast ratio of 4.5:1
 
+3.66) [#aswift_6, .ns-tdhkv-e-36]
+Fix any of the following:
+  Element has insufficient color contrast of 3.68 (foreground color: #80868b, background color: #ffffff, font size: 7.7pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.67) [#aswift_3, .ns-pm6x9-e-16]
+Fix any of the following:
+  Element has insufficient color contrast of 2.45 (foreground color: #fb7701, background color: #f3f3f7, font size: 8.3pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.68) [#aswift_3, .ns-pm6x9-e-25]
+Fix any of the following:
+  Element has insufficient color contrast of 2.45 (foreground color: #fb7701, background color: #f3f3f7, font size: 8.3pt, font weight: normal). Expected contrast ratio of 4.5:1
+
+3.69) [#aswift_3, .ns-pm6x9-e-42]
+Fix any of the following:
+  Element has insufficient color contrast of 3.68 (foreground color: #80868b, background color: #ffffff, font size: 8.3pt, font weight: normal). Expected contrast ratio of 4.5:1
+
 _________________________________________________________________________________
 4) Ensures <iframe> and <frame> elements contain a non-empty title attribute.
 https://dequeuniversity.com/rules/axe/3.1/frame-title?application=axeAPI
@@ -351,7 +381,7 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
-4.3) [#aswift_3]
+4.3) [#aswift_6]
 Fix any of the following:
   aria-label attribute does not exist or is empty
   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
@@ -359,7 +389,7 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
-4.4) [#aswift_1, body > iframe]
+4.4) [#aswift_3]
 Fix any of the following:
   aria-label attribute does not exist or is empty
   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
@@ -367,7 +397,7 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
-4.5) [#aswift_5, iframe:nth-child(17)]
+4.5) [#aswift_1, iframe]
 Fix any of the following:
   aria-label attribute does not exist or is empty
   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
@@ -375,7 +405,23 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
-4.6) [#aswift_3, body > iframe]
+4.6) [#aswift_5, iframe:nth-child(26)]
+Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element has no title attribute or the title attribute is empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+4.7) [#aswift_6, iframe:nth-child(27)]
+Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element has no title attribute or the title attribute is empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+4.8) [#aswift_3, iframe]
 Fix any of the following:
   aria-label attribute does not exist or is empty
   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
@@ -397,27 +443,19 @@ Fix any of the following:
 _________________________________________________________________________________
 6) Ensures every HTML document has a lang attribute.
 https://dequeuniversity.com/rules/axe/3.1/html-has-lang?application=axeAPI
-6.1) [#aswift_1, html]
+6.1) [#aswift_1, iframe, html]
 Fix any of the following:
   The <html> element does not have a lang attribute
 
-6.2) [#aswift_1, body > iframe, html]
+6.2) [#aswift_5, iframe:nth-child(26), html]
 Fix any of the following:
   The <html> element does not have a lang attribute
 
-6.3) [#aswift_5, html]
+6.3) [#aswift_6, iframe:nth-child(27), html]
 Fix any of the following:
   The <html> element does not have a lang attribute
 
-6.4) [#aswift_5, iframe:nth-child(17), html]
-Fix any of the following:
-  The <html> element does not have a lang attribute
-
-6.5) [#aswift_3, html]
-Fix any of the following:
-  The <html> element does not have a lang attribute
-
-6.6) [#aswift_3, body > iframe, html]
+6.4) [#aswift_3, iframe, html]
 Fix any of the following:
   The <html> element does not have a lang attribute
 
@@ -450,7 +488,7 @@ Fix all of the following:
 Fix all of the following:
   Page does not have a main landmark
 
-9.3) [#aswift_1, body > iframe, html]
+9.3) [#aswift_1, iframe, html]
 Fix all of the following:
   Page does not have a main landmark
 
@@ -458,26 +496,34 @@ Fix all of the following:
 Fix all of the following:
   Page does not have a main landmark
 
-9.5) [#aswift_5, iframe:nth-child(17), html]
+9.5) [#aswift_5, iframe:nth-child(26), html]
 Fix all of the following:
   Page does not have a main landmark
 
-9.6) [iframe[title="reCAPTCHA"], html]
+9.6) [#aswift_6, html]
 Fix all of the following:
   Page does not have a main landmark
 
-9.7) [#aswift_3, html]
+9.7) [#aswift_6, iframe:nth-child(27), html]
 Fix all of the following:
   Page does not have a main landmark
 
-9.8) [#aswift_3, body > iframe, html]
+9.8) [iframe[title="reCAPTCHA"], html]
+Fix all of the following:
+  Page does not have a main landmark
+
+9.9) [#aswift_3, html]
+Fix all of the following:
+  Page does not have a main landmark
+
+9.10) [#aswift_3, iframe, html]
 Fix all of the following:
   Page does not have a main landmark
 
 _________________________________________________________________________________
 10) Ensures links have discernible text.
 https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI
-10.1) [#aswift_1, #aw0]
+10.1) [#aswift_1, .ns-27eik-e-3]
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -488,7 +534,7 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
-10.2) [#aswift_5, #aw0]
+10.2) [#aswift_1, .ns-27eik-e-39]
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -499,7 +545,73 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
-10.3) [#aswift_3, #aw0]
+10.3) [#aswift_5, .ns-6ox7f-e-1]
+Fix all of the following:
+  Element is in tab order and does not have accessible text
+
+Fix any of the following:
+  Element does not have text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+10.4) [#aswift_5, .ns-6ox7f-e-11]
+Fix all of the following:
+  Element is in tab order and does not have accessible text
+
+Fix any of the following:
+  Element does not have text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+10.5) [#aswift_6, .ns-tdhkv-e-14]
+Fix all of the following:
+  Element is in tab order and does not have accessible text
+
+Fix any of the following:
+  Element does not have text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+10.6) [#aswift_6, .ns-tdhkv-e-19]
+Fix all of the following:
+  Element is in tab order and does not have accessible text
+
+Fix any of the following:
+  Element does not have text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+10.7) [#aswift_6, .ns-tdhkv-e-24]
+Fix all of the following:
+  Element is in tab order and does not have accessible text
+
+Fix any of the following:
+  Element does not have text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+10.8) [#aswift_3, .ns-pm6x9-e-6]
+Fix all of the following:
+  Element is in tab order and does not have accessible text
+
+Fix any of the following:
+  Element does not have text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+
+10.9) [#aswift_3, .ns-pm6x9-e-30]
 Fix all of the following:
   Element is in tab order and does not have accessible text
 

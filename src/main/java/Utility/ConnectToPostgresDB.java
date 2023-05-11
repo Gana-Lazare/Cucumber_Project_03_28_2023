@@ -55,9 +55,9 @@ public class ConnectToPostgresDB {
             connection =connecttoPostgresDb();
             //ps = connection.prepareStatement("select "+columnName+" from "+tableName);
             Statement statement = connection.createStatement();
-            System.out.println("statement vlue : " + statement.toString());
+            //System.out.println("statement vlue : " + statement.toString());
              resultSet = statement.executeQuery("select "+columnName+" from "+tableName);
-            System.out.println("resultset vlue : " + resultSet.toString());
+            //System.out.println("resultset vlue : " + resultSet.toString());
             //resultSet = ps.executeQuery();
            // System.out.println("result et next :" + resultSet.next());
 

@@ -1,4 +1,4 @@
 
 @Test
 Scenario: Log in to page with valid credentials # src/test/java/features/login.feature:5
-  Given user navigate to the site               # stepDefinitions.login.user_navigate_to_the_site()
+  Given user navigate to the site               # stepDefinitions.Login.user_navigate_to_the_site()
