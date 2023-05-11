@@ -17,10 +17,7 @@ import com.deque.html.axecore.results.Rule;
 import com.deque.html.axecore.selenium.AxeBuilder;
 import com.deque.html.axecore.selenium.AxeReporter;
 
-import io.cucumber.java.AfterAll;
-import io.cucumber.java.Before;
-import io.cucumber.java.BeforeAll;
-import io.cucumber.java.Scenario;
+import io.cucumber.java.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.checkerframework.checker.units.qual.C;
@@ -32,6 +29,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -125,8 +123,18 @@ public class BasePage {
 
             driver.get(url);
 
+            accessibilityReport(driver);
             driver.manage().window().maximize();
-            //axeBuilder below takes tramendous amount of time to analyse the webPage
+        }
+        catch (Exception e){}
+    }
+    public WebDriver getDriver() {
+
+        return this.driver;
+    }
+
+    public void accessibilityReport(WebDriver driver){
+        try{ //axeBuilder below takes tramendous amount of time to analyse the webPage
             //Im not currently Sure of this is the right method to implement this
 //        Results axeResults = axeBuilder.analyze(driver);
 //        System.out.println(axeResults);
@@ -149,17 +157,14 @@ public class BasePage {
             //List<Rule> passResults = results.getPasses();
             for (Rule i : violations) {
                 //for (Rule i : passResults) {
-               // System.out.println(i);
+                // System.out.println(i);
             }
             SoftAssert softAssert = new SoftAssert();
             softAssert.assertEquals(0, results.getViolations().size());
-           // Assert.assertEquals(results.getViolations().size(),);
+            // Assert.assertEquals(results.getViolations().size(),);
             ViolationsReporter.buildCustomReport(results);
             //Assert.assertTrue(results.violationFree(), ViolationsReporter.buildCustomReport(results));
-            softAssert.assertEquals(0, results.getViolations().size());
-
-            driver.quit();
-        }
+            softAssert.assertEquals(0, results.getViolations().size());}
         catch (Exception e){}
     }
 
@@ -269,7 +274,7 @@ public class BasePage {
     }
 
 
-    public static void readAccessibility(){
+    public  void readAccessibility(){
  try {
      Context context = new Context();
 
@@ -312,9 +317,7 @@ public class BasePage {
  }
     }
 
-    public static void main(String[] args) {
-        readAccessibility();
-    }
+
 
 
 }

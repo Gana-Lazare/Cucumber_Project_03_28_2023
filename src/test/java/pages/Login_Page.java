@@ -1,7 +1,9 @@
 package pages;
 
 import com.aventstack.extentreports.ExtentTest;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -9,14 +11,20 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 
+import java.sql.DriverManager;
+
 
 public class Login_Page extends BasePage{
     //to Use only One Driver instance across all the testing
     // I use init Elements
-    Login_Page login_page;
+    Login_Page login_page ;
+    BasePage basePage = new BasePage();
+   // WebDriver driver = basePage.driver;
+
     @BeforeMethod
     public void getInit(){
         login_page = PageFactory.initElements(driver,Login_Page.class);
+        //this.driver = basePage.getDriver();
     }
 
     //login locator using findby
@@ -39,10 +47,12 @@ public class Login_Page extends BasePage{
         //js_click(username_WebElement);
 
         try {
-            Thread.sleep(4000);
+
         }catch (Exception e){}
     }
 
-
-
+//   public void loginPageAccessibilityTest(){
+//
+//        basePage.accessibilityReport(driver);
+//   }
 }
