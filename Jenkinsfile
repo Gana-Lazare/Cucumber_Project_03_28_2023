@@ -21,7 +21,7 @@ pipeline {
                 }
         stage('UI-Automation-Test') {
             steps {
-                ssh 'mvn clean test'
+                sh 'mvn clean test'
             }
         }
         stage('Deploy') {
