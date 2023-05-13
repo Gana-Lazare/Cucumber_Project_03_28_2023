@@ -27,7 +27,7 @@ Fix any of the following:
   Element's default semantics were not overridden with role="none"
   Element has no title attribute or the title attribute is empty
 
-2.2) [.input-group-btn > .btn-primary.btn[type="submit"]]
+2.2) [.input-group-btn > .btn-primary]
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -397,7 +397,7 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
-4.7) [#aswift_6, iframe:nth-child(18)]
+4.7) [#aswift_6, iframe:nth-child(29)]
 Fix any of the following:
   aria-label attribute does not exist or is empty
   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
@@ -435,19 +435,15 @@ Fix any of the following:
 Fix any of the following:
   The <html> element does not have a lang attribute
 
-6.3) [#aswift_6, html]
+6.3) [#aswift_6, iframe:nth-child(29), html]
 Fix any of the following:
   The <html> element does not have a lang attribute
 
-6.4) [#aswift_6, iframe:nth-child(18), html]
+6.4) [#aswift_3, html]
 Fix any of the following:
   The <html> element does not have a lang attribute
 
-6.5) [#aswift_3, html]
-Fix any of the following:
-  The <html> element does not have a lang attribute
-
-6.6) [#aswift_3, body > iframe, html]
+6.5) [#aswift_3, body > iframe, html]
 Fix any of the following:
   The <html> element does not have a lang attribute
 
@@ -496,7 +492,7 @@ Fix all of the following:
 Fix all of the following:
   Page does not have a main landmark
 
-9.7) [#aswift_6, iframe:nth-child(18), html]
+9.7) [#aswift_6, iframe:nth-child(29), html]
 Fix all of the following:
   Page does not have a main landmark
 
@@ -515,7 +511,7 @@ Fix all of the following:
 _________________________________________________________________________________
 10) Ensures links have discernible text.
 https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI
-10.1) [#aswift_1, .ns-dm3f1-e-6]
+10.1) [#aswift_1, .ns-96ewi-e-3]
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -526,7 +522,7 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
-10.2) [#aswift_1, .ns-dm3f1-e-11]
+10.2) [#aswift_1, .ns-96ewi-e-39]
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -537,7 +533,7 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
-10.3) [#aswift_1, .ns-dm3f1-e-16]
+10.3) [#aswift_5, .ns-6hyaf-e-1]
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -548,7 +544,7 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
-10.4) [#aswift_1, .ns-dm3f1-e-21]
+10.4) [#aswift_5, .ns-6hyaf-e-11]
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -559,7 +555,7 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
-10.5) [#aswift_1, .ns-dm3f1-e-24]
+10.5) [#aswift_6, .ns-5mfz9-e-23]
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -570,40 +566,7 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
-10.6) [#aswift_5, .ns-bn7sa-e-1]
-Fix all of the following:
-  Element is in tab order and does not have accessible text
-
-Fix any of the following:
-  Element does not have text that is visible to screen readers
-  aria-label attribute does not exist or is empty
-  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
-  Element's default semantics were not overridden with role="presentation"
-  Element's default semantics were not overridden with role="none"
-
-10.7) [#aswift_5, .ns-bn7sa-e-11]
-Fix all of the following:
-  Element is in tab order and does not have accessible text
-
-Fix any of the following:
-  Element does not have text that is visible to screen readers
-  aria-label attribute does not exist or is empty
-  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
-  Element's default semantics were not overridden with role="presentation"
-  Element's default semantics were not overridden with role="none"
-
-10.8) [#aswift_6, #aw0]
-Fix all of the following:
-  Element is in tab order and does not have accessible text
-
-Fix any of the following:
-  Element does not have text that is visible to screen readers
-  aria-label attribute does not exist or is empty
-  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
-  Element's default semantics were not overridden with role="presentation"
-  Element's default semantics were not overridden with role="none"
-
-10.9) [#aswift_3, #aw0]
+10.6) [#aswift_3, #aw0]
 Fix all of the following:
   Element is in tab order and does not have accessible text
 

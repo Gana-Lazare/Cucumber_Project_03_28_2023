@@ -18,6 +18,10 @@ Login_Page login_page = new Login_Page();
         tearDown();
 
     }
+    @When("user click on login")
+    public void user_click_on_login() {
+
+    }
 
 
 }

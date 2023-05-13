@@ -74,6 +74,10 @@ public class BasePage {
     ConnectToPostgresDB connectToPostgresDB = new ConnectToPostgresDB();
 
 
+public void takescreenshot(){
+    TakesScreenshot takesScreenshot ;
+
+}
 
 
     public void launchBrowser() throws MalformedURLException {
