@@ -14,7 +14,8 @@ pipeline {
                 }
         stage('UI-Automation-Test') {
             steps {
-                sh 'mvn clean test'
+                //sh 'mvn clean test'
+                bat 'mvn clean test'
             }
         }
         stage('Deploy') {

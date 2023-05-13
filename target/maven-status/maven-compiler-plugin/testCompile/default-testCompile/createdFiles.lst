@@ -1,8 +1,0 @@
-runner\Runner.class
-pages\BasePage.class
-Reporting\ViolationsReporter.class
-Reporting\ExtentTestManager.class
-Reporting\ExtentManager.class
-pages\Login_Page.class
-performance\BlazeMeterExecutor.class
-stepDefinitions\Login.class
