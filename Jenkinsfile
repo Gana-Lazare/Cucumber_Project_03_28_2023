@@ -12,25 +12,25 @@ pipeline {
                     steps {
                     script{
                     //Create a new folder
-                    def folderName = "Performance Report"
-                                        def jobName = env.JOB_NAME
-                                        def stageName = env.STAGE_NAME
-
-                                        // Create the folder
-                                        folderName = folderName.replaceAll("[^a-zA-Z0-9_-]", "_") // Sanitize folder name
-                                        def folderPath = "${jobName}/${folderName}"
-
-                                        // Check if the folder already exists
-                                        def existingFolder = Jenkins.instance.getItemByFullName(folderPath)
-                                        if (existingFolder) {
-                                            echo "Folder '${folderPath}' already exists."
-                                        } else {
-                                            // Create the folder
-                                            def folder = Jenkins.instance.createProject(Folder, folderName)
-                                            folder.fullName = folderPath
-                                            folder.save()
-                                            echo "Folder '${folderPath}' created."
-                                            }
+//                     def folderName = "Performance Report"
+//                                         def jobName = env.JOB_NAME
+//                                         def stageName = env.STAGE_NAME
+//
+//                                         // Create the folder
+//                                         folderName = folderName.replaceAll("[^a-zA-Z0-9_-]", "_") // Sanitize folder name
+//                                         def folderPath = "${jobName}/${folderName}"
+//
+//                                         // Check if the folder already exists
+//                                         def existingFolder = Jenkins.instance.getItemByFullName(folderPath)
+//                                         if (existingFolder) {
+//                                             echo "Folder '${folderPath}' already exists."
+//                                         } else {
+//                                             // Create the folder
+//                                             def folder = Jenkins.instance.createProject(Folder, folderName)
+//                                             folder.fullName = folderPath
+//                                             folder.save()
+//                                             echo "Folder '${folderPath}' created."
+//                                             }
                     //end new folder creation
                                         def properties = readProperties file: 'src/main/java/Utility/config.properties'
 
