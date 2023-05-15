@@ -27,7 +27,11 @@ Fix any of the following:
   Element's default semantics were not overridden with role="none"
   Element has no title attribute or the title attribute is empty
 
+<<<<<<< HEAD
 2.2) [.input-group-btn > .btn-primary.btn[type="submit"]]
+=======
+2.2) [.input-group-btn > .btn-primary]
+>>>>>>> master
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -389,7 +393,11 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
+<<<<<<< HEAD
 4.6) [#aswift_5, iframe:nth-child(25)]
+=======
+4.6) [#aswift_5, iframe:nth-child(26)]
+>>>>>>> master
 Fix any of the following:
   aria-label attribute does not exist or is empty
   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
@@ -397,7 +405,11 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
+<<<<<<< HEAD
 4.7) [#aswift_6, iframe:nth-child(26)]
+=======
+4.7) [#aswift_6, iframe:nth-child(29)]
+>>>>>>> master
 Fix any of the following:
   aria-label attribute does not exist or is empty
   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
@@ -431,11 +443,19 @@ https://dequeuniversity.com/rules/axe/3.1/html-has-lang?application=axeAPI
 Fix any of the following:
   The <html> element does not have a lang attribute
 
+<<<<<<< HEAD
 6.2) [#aswift_5, iframe:nth-child(25), html]
 Fix any of the following:
   The <html> element does not have a lang attribute
 
 6.3) [#aswift_6, iframe:nth-child(26), html]
+=======
+6.2) [#aswift_5, iframe:nth-child(26), html]
+Fix any of the following:
+  The <html> element does not have a lang attribute
+
+6.3) [#aswift_6, iframe:nth-child(29), html]
+>>>>>>> master
 Fix any of the following:
   The <html> element does not have a lang attribute
 
@@ -484,7 +504,11 @@ Fix all of the following:
 Fix all of the following:
   Page does not have a main landmark
 
+<<<<<<< HEAD
 9.5) [#aswift_5, iframe:nth-child(25), html]
+=======
+9.5) [#aswift_5, iframe:nth-child(26), html]
+>>>>>>> master
 Fix all of the following:
   Page does not have a main landmark
 
@@ -492,7 +516,11 @@ Fix all of the following:
 Fix all of the following:
   Page does not have a main landmark
 
+<<<<<<< HEAD
 9.7) [#aswift_6, iframe:nth-child(26), html]
+=======
+9.7) [#aswift_6, iframe:nth-child(29), html]
+>>>>>>> master
 Fix all of the following:
   Page does not have a main landmark
 
@@ -511,7 +539,11 @@ Fix all of the following:
 _________________________________________________________________________________
 10) Ensures links have discernible text.
 https://dequeuniversity.com/rules/axe/3.1/link-name?application=axeAPI
+<<<<<<< HEAD
 10.1) [#aswift_1, .ns-f01br-e-3]
+=======
+10.1) [#aswift_1, .ns-96ewi-e-3]
+>>>>>>> master
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -522,7 +554,11 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
+<<<<<<< HEAD
 10.2) [#aswift_1, .ns-f01br-e-39]
+=======
+10.2) [#aswift_1, .ns-96ewi-e-39]
+>>>>>>> master
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -533,7 +569,11 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
+<<<<<<< HEAD
 10.3) [#aswift_5, .ns-zmftu-e-2]
+=======
+10.3) [#aswift_5, .ns-6hyaf-e-1]
+>>>>>>> master
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -544,7 +584,11 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
+<<<<<<< HEAD
 10.4) [#aswift_5, .ns-zmftu-e-4]
+=======
+10.4) [#aswift_5, .ns-6hyaf-e-11]
+>>>>>>> master
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -555,7 +599,11 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
+<<<<<<< HEAD
 10.5) [#aswift_5, .ns-zmftu-e-9]
+=======
+10.5) [#aswift_6, .ns-5mfz9-e-23]
+>>>>>>> master
 Fix all of the following:
   Element is in tab order and does not have accessible text
 
@@ -566,6 +614,7 @@ Fix any of the following:
   Element's default semantics were not overridden with role="presentation"
   Element's default semantics were not overridden with role="none"
 
+<<<<<<< HEAD
 10.6) [#aswift_6, .ns-ns84x-e-2]
 Fix all of the following:
   Element is in tab order and does not have accessible text
@@ -589,6 +638,9 @@ Fix any of the following:
   Element's default semantics were not overridden with role="none"
 
 10.8) [#aswift_3, #aw0]
+=======
+10.6) [#aswift_3, #aw0]
+>>>>>>> master
 Fix all of the following:
   Element is in tab order and does not have accessible text
 

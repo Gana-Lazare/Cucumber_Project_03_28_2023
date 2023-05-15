@@ -176,6 +176,15 @@
         </dependency>
 
 
+        <!-- https://mvnrepository.com/artifact/com.blazemeter/blazemeter-api-client -->
+        <dependency>
+            <groupId>com.blazemeter</groupId>
+            <artifactId>blazemeter-api-client</artifactId>
+            <version>1.22</version>
+        </dependency>
+
+
+
 
 
     </dependencies>

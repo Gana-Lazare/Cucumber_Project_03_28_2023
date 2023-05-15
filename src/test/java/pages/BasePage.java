@@ -27,6 +27,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+
+import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -72,6 +75,12 @@ public class BasePage {
    // public ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir")+"\\Report\\spark.html");
     ConnectToPostgresDB connectToPostgresDB = new ConnectToPostgresDB();
 
+
+
+public void takescreenshot(){
+    TakesScreenshot takesScreenshot ;
+
+}
 
 
 
@@ -177,6 +186,16 @@ public class BasePage {
         return driver;
     }
 
+
+    public void actionexemple(){
+        Actions action = new Actions(driver);
+//        TakesScreenshot takesScreenshot =
+    }
+
+    public void handleAlert(){
+        Alert alert = driver.switchTo().alert();
+alert.dismiss();
+    }
 
 
     public WebDriver getCloudDriver(String envName, String envUsername, String envAccessKey, String os, String os_version, String browserName,
