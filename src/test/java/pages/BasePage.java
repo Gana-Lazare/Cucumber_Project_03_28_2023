@@ -42,10 +42,7 @@ import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -73,9 +70,28 @@ public class BasePage {
    // public ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir")+"\\Report\\spark.html");
     ConnectToPostgresDB connectToPostgresDB = new ConnectToPostgresDB();
 
+    //develop the following :
+    //get status of test
+    //if test Pass no screenshot if fails screenshot
+    //create folder screeshots if fails
 
-public void takescreenshot(){
-    TakesScreenshot takesScreenshot ;
+public void takescreenshot(WebDriver driver){
+    try{
+        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+
+
+        File screenshot = takesScreenshot.getScreenshotAs(OutputType.FILE);
+        screenshot.mkdir();
+        File file = new File(System.getProperty("user.dit")+"\\src\\screenShots");
+        FileUtils.copyFile(screenshot,file);
+        FileInputStream fs = new FileInputStream(file);
+
+    }
+    catch (Exception e){
+
+    }
+
+
 
 }
 
