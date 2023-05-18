@@ -29,7 +29,7 @@ pipeline {
                    echo " value of test id ${api_key}"
                    echo " value of test id ${api_secret}"
 
-           echo 'curl "https://a.blazemeter.com/api/v4/tests/${testId}/start?delayedStart=false"     -X POST     -H "Content-Type: application/json"     --user "${api_key}:${api_secret}"\''
+           echo 'curl "https://a.blazemeter.com/api/v4/tests/${testId}/start?delayedStart=false"     -X POST     -H "Content-Type: application/json"     --user "${api_key}:${api_secret}\''
 
              }
 
