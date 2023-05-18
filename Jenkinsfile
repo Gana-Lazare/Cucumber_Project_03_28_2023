@@ -42,6 +42,7 @@ pipeline {
                 }
         stage('UI-Automation-Test') {
             steps {
+            echo "ui automation maven steps"
                 //sh 'mvn clean test'
                // bat 'mvn clean test'
             }
