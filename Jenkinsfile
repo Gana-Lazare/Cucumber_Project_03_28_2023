@@ -1,4 +1,4 @@
-@Library('pipeline-utility-steps') _
+@Library('pipeline-utility-steps@integration') _
 pipeline {
 
     agent any
