@@ -13,7 +13,45 @@ pipeline {
 
                     steps {
                     script{
-                    //Create a new folder
+
+                    //end new folder creation
+                                        def properties = readProperties file: 'src/main/java/Utility/config.properties'
+
+
+                                      //   echo "Value of 'testId': ${properties.performance_Test_Id}"
+                                      //   echo "Value of 'api_key': ${properties.blazemeter_api_key}"
+
+
+             }
+                  // Access the properties using their keys
+          def testId = properties['performance_Test_Id']
+          def api_key = properties['blazemeter_api_key']
+          def api_secret = properties['blazemeter_api_secret']
+                                         echo 'performance'
+                                           echo " value of test id ${testId}"
+                       //                           bat 'curl "https://a.blazemeter.com/api/v4/tests/12584787/start?delayedStart=false"     -X POST     -H "Content-Type: application/json"     --user "2c0efbe3c64b6c60d864aea9:828ae67a0b1c2f5f9d86dc952ef59d75b3d8f062467973372d4560fd0d4bc6b273b731db"\''
+                                                  bat 'curl "https://a.blazemeter.com/api/v4/tests/${testId}/start?delayedStart=false"     -X POST     -H "Content-Type: application/json"     --user "${api_key}:${api_secret}"\''
+                       //                         bat 'curl "https://a.blazemeter.com/api/v4/tests/${12584787}/start?delayedStart=false"     -X POST     -H "Content-Type: application/json"     --user "${2c0efbe3c64b6c60d864aea9}:${828ae67a0b1c2f5f9d86dc952ef59d75b3d8f0624679}"\''
+
+          }
+
+                }
+        stage('UI-Automation-Test') {
+            steps {
+                //sh 'mvn clean test'
+                bat 'mvn clean test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
+
+//------
+//Create a new folder
 //                     def folderName = "Performance Report"
 //                                         def jobName = env.JOB_NAME
 //                                         def stageName = env.STAGE_NAME
@@ -33,36 +71,3 @@ pipeline {
 //                                             folder.save()
 //                                             echo "Folder '${folderPath}' created."
 //                                             }
-                    //end new folder creation
-                                        def properties = readProperties file: 'src/main/java/Utility/config.properties'
-
-
-                                                                                                 //   echo "Value of 'testId': ${properties.performance_Test_Id}"
-                                                                                                 //   echo "Value of 'api_key': ${properties.blazemeter_api_key}"
-
-
-             }
-                  // Access the properties using their keys
-          def testId = properties['performance_Test_Id']
-          def api_key = properties['blazemeter_api_key']
-          def api_secret = properties['blazemeter_api_secret']}
-                                 echo 'performance'
-                                 echo " value of test id ${testId}"
-             //                           bat 'curl "https://a.blazemeter.com/api/v4/tests/12584787/start?delayedStart=false"     -X POST     -H "Content-Type: application/json"     --user "2c0efbe3c64b6c60d864aea9:828ae67a0b1c2f5f9d86dc952ef59d75b3d8f062467973372d4560fd0d4bc6b273b731db"\''
-                                        bat 'curl "https://a.blazemeter.com/api/v4/tests/${testId}/start?delayedStart=false"     -X POST     -H "Content-Type: application/json"     --user "${api_key}:${api_secret}"\''
-             //                         bat 'curl "https://a.blazemeter.com/api/v4/tests/${12584787}/start?delayedStart=false"     -X POST     -H "Content-Type: application/json"     --user "${2c0efbe3c64b6c60d864aea9}:${828ae67a0b1c2f5f9d86dc952ef59d75b3d8f0624679}"\''
-
-                }
-        stage('UI-Automation-Test') {
-            steps {
-                //sh 'mvn clean test'
-                bat 'mvn clean test'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
-}
