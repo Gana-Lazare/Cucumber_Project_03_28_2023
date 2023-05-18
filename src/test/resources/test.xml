@@ -10,7 +10,8 @@
     <parameter name="os_version" value="10"></parameter>
     <parameter name="os" value="Windows"></parameter>
     <parameter name="url" value="https://www.delta.com/"></parameter>
-    <test name="Regression1">
+
+    <test name="regression">
         <classes>
             <class name="runner.Runner"/>
         </classes>
