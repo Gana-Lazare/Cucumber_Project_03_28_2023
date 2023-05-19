@@ -29,8 +29,16 @@ pipeline {
                    echo " value of test id ${api_key}"
                    echo " value of test id ${api_secret}"
 
-                  echo """curl "https://a.blazemeter.com/api/v4/tests/${testId}/start?delayedStart=false"     -X POST     -H "Content-Type: application/json"     --user "${api_key}:${api_secret}"""
-                    echo "curl 'https://a.blazemeter.com/api/v4/tests/${testId}/start?delayedStart=false'     -X POST     -H 'Content-Type: application/json'     --user '${api_key}:${api_secret}'\""
+//below
+// String Interpolation
+// Groovy allows the use of both single quotes and double
+//  quotes for denoting strings (or triple single quotes and triple
+//   double quotes for multi-lined strings). The primary difference
+//   between single and double quoted strings is the ability for double
+// quoted strings to interpolate any Groovy expressions within the string (like bash, zsh, etc.).
+                  bat """curl "https://a.blazemeter.com/api/v4/tests/${testId}/start?delayedStart=false"     -X POST     -H "Content-Type: application/json"     --user "${api_key}:${api_secret}"""
+
+                   // echo "curl 'https://a.blazemeter.com/api/v4/tests/${testId}/start?delayedStart=false'     -X POST     -H 'Content-Type: application/json'     --user '${api_key}:${api_secret}'\""
 
              }
 
