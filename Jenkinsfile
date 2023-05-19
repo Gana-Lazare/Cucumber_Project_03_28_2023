@@ -14,12 +14,7 @@ pipeline {
                     steps {
                     script{
 
-          def properties = readProperties file: 'src/main/java/Utility/config.properties'
 
-                       // Access the properties using their keys
-          def testId = properties['performance_Test_Id']
-          def api_key = properties['blazemeter_api_key']
-          def api_secret = properties['blazemeter_api_secret']
                    echo 'performance'
 
 
