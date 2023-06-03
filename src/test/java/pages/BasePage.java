@@ -95,7 +95,7 @@ public void takescreenshot(WebDriver driver){
 
 }
 
-
+@
     public void launchBrowser() throws MalformedURLException {
         try {
             String useCloudEnv = "false";
