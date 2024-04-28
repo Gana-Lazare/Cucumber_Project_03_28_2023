@@ -15,5 +15,6 @@ with:
        -Create Multibranch project  and paste the git url in the repository section
        -in the Root directory of the project create Jenkinsfile (makes sure that the spelling is matching how its in jenkins by default or change it to the same name )
   * Please navigate to Jenkinsfile to understand what is implemented such as Creating mutiple stages and assigning different scripts and steps 
-  as in this project a performance test is performed using  curl command from jenkins file and  mvn clean test as bat 
+  as in this project a performance test is performed using  curl command from jenkins file and  mvn clean test as bat
+©copy right reserved 
        
