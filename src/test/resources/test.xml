@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="test google" verbose="1" >
+<suite name="test google" verbose="1"  >
 
     <parameter name="useCloudEnv" value="false"></parameter>
     <parameter name="CloudEnvName" value="saucelabs"></parameter>

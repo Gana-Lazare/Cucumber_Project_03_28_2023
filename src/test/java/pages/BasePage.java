@@ -95,7 +95,7 @@ public void takescreenshot(WebDriver driver){
 
 }
 
-@
+
     public void launchBrowser() throws MalformedURLException {
         try {
             String useCloudEnv = "false";
@@ -130,6 +130,7 @@ public void takescreenshot(WebDriver driver){
                 if (envName == "browserstack") {
                     this.driver = getCloudDriver(envName, browserstack_username, browserstack_accesskey, os, os_version,
                             browserName, browserVersion);
+
                 } else if (envName.equalsIgnoreCase("saucelabs")) {
                     System.out.println("Using Sauce Labs");
                     this.driver = getCloudDriver(envName, saucelabs_username, saucelabs_accesskey, os, os_version,
@@ -187,6 +188,7 @@ public void takescreenshot(WebDriver driver){
             //Assert.assertTrue(results.violationFree(), ViolationsReporter.buildCustomReport(results));
             softAssert.assertEquals(0, results.getViolations().size());}
         catch (Exception e){}
+
     }
 
     public WebDriver getLocalDriver() {
@@ -194,6 +196,7 @@ public void takescreenshot(WebDriver driver){
 
         this.driver = new EdgeDriver();
         driver.manage().window().maximize();
+
 
         return driver;
     }
@@ -287,6 +290,9 @@ alert.dismiss();
         }
     }
 
+    public void switchToIFrame(int index){
+        driver.switchTo().frame(index);
+    }
     public void js_click(WebElement element) {
         try {
             //add the wait time in properties file

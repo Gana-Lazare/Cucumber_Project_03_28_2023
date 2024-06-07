@@ -3,6 +3,7 @@ package pages;
 import com.aventstack.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,7 +32,7 @@ public class Login_Page extends BasePage{
     @FindBy(how = How.ID,using = "login-modal-button")
     public WebElement login_Button_WebElement;
 
-    //usernaem or skymile number
+    //username or skymile number
     @FindBy(how = How.XPATH,using = "//*[@id=\"userId\"]/div/div/input")
     WebElement username_WebElement;
 
@@ -42,6 +43,7 @@ public class Login_Page extends BasePage{
     public void clickOnLogInButton(){
 
         driver.findElement(By.id("login-modal-button")).click();
+
         //login_Button_WebElement.click();
         //js_click(login_Button_WebElement);
         //js_click(username_WebElement);

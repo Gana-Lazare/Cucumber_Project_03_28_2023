@@ -19,7 +19,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
                 "pretty:target/cucumber-reports/cucumber-pretty.txt",
                 "usage:target/cucumber-reports/cucumber-usage.json",
                 "junit:target/cucumber-reports/cucumber-results.xml",}, //to generate different types of reporting
-        monochrome = true, //display the console output in a proper readable format
+        monochrome = false, //display the console output in a proper readable format
         dryRun = false, //to check the mapping is proper between feature file and step def file
         publish = true)
 // Run the command mvn test -Dcucumber.options="--tags @tag1" to execute from local specific tags
